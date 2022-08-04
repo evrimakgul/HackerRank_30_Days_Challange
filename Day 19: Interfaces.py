@@ -4,13 +4,12 @@ class AdvancedArithmetic(object):
 
 class Calculator(AdvancedArithmetic):
     def divisorSum(self, n):
-        constraint_max = 1000
-        divisors = list()
-        for divisor in range(1, 1+constraint_max):
+        divisor_sum = 0
+        for divisor in range(1, n+1):
             if n % divisor == 0:
-                divisors.append(divisor)
+                divisor_sum += divisor
         
-        return sum(divisors)
+        return divisor_sum
 
 
 n = int(input())
